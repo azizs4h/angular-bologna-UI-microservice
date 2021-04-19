@@ -1,0 +1,41 @@
+<div #card class="container-sm py-5"  style="margin: 50px auto 100px auto;"> 
+  <pre>
+  </pre>
+  <div class="accordion menushadow">
+        <div class="card" *ngFor=" let i = index; let veri of fakulte">
+          <div class="card-header" [attr.id]="'item' + i">
+            <h5 class="mb-0">
+              <button class="btn btn-link shadow-none" type="button" style="color: #f6424c;font-weight: 700;font-size: large;" data-toggle="collapse" (click)="getFakulte(veri.links[0].href,veri.university_id)" [attr.data-target]="'#inneritem' + i" aria-expanded="false" [attr.aria-controls]="'#inneritem' + i">
+                {{ veri.name }}
+              </button>
+            </h5>
+          </div>
+      
+          <div [attr.id]="'inneritem' + i" class="collapse" [attr.aria-labelledby]="'item' + i">
+            <div class="card-body">
+                <div class="accordion menushadow">
+                  <div class="card" *ngFor=" let j = index ;let fakulte of fakulteBilgisi[veri.university_id]">
+                    <div class="card-header" [attr.id]="'items' + i + j">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link shadow-none" type="button" style="color: #f6424c;font-weight: 700;font-size: large;" data-toggle="collapse" (click)="getBolum(fakulte.links[0].href,fakulte.major_department_id)" [attr.data-target]="'#inneritems' + i + j" aria-expanded="false" [attr.aria-controls]="'#inneritems' + i + j">
+                          {{ fakulte.major_department_name }}
+                        </button>
+                      </h5>
+                    </div>
+                
+                    <div [attr.id]="'inneritems' + i + j" class="collapse" [attr.aria-labelledby]="'items' + i + j">
+                      <div class="card-body">
+                        <div class="loader" *ngIf=" ( getVeri.showSpinner | async ) " ><div class="circle"></div></div>
+                            <ul class="list-group" *ngIf="!(getVeri.showSpinner | async)">
+                              <li *ngFor="let bolum of bolumBilgisi[fakulte.major_department_id]" class="list-group-item border rounded custom">
+                                <i class="fas fa-info-circle icon"></i><a [routerLink]="['/hakkinda', fakulte.major_department_name, fakulte.major_department_id]" title="Ders İçeriğini Görüntülemek İçin Tıklayınız...">{{ bolum.department_name }}</a>
+                              </li>
+                            </ul>             
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<footer class="container-fluid footer-all">
+        <div class="row">
+                <div class="col-md-4 py-4">
+                    <a routerLink="/"><img src="../../../assets/images/konya-teknik-uzun.png" alt="ktunlogouzun"></a>
+                </div>
+                <div class="col-md-4 py-4">
+                    <span style="font-size: large; font-weight: 900;">İletişim :</span>
+                    <ul style="padding-left: 10px;">
+                       <li *ngFor="let bilgi of iletisim | keyvalue :unsorted ">
+                        <span>{{ bilgi.key }}:</span>
+                           <ul>
+                            <li *ngFor="let bilgi2 of bilgi.value | keyvalue :unsorted ">
+                                <i class="fas fa-phone-alt" style="margin: 5px;"></i>{{ bilgi2.key }} : {{ bilgi2.value }}
+                            </li>
+                        </ul>
+                       </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 py-4">
+                    <span style="font-size: large; font-weight: 900;">Adres :</span>
+                    <ul style="padding-left: 10px;">
+                        <ul  style="padding-left: 10px;">
+                            <li *ngFor="let bilgi of adres | keyvalue :unsorted">
+                             <span>{{ bilgi.key }}:</span>
+                             <ul>
+                                 <li style="word-wrap:break-word;"> {{ bilgi.value }} </li>
+                             </ul>
+                               
+                            </li>
+                         </ul>
+                    </ul>
+                </div>
+        </div>
+        <div class="row color">
+            <div class="col-md-12 text-center">
+                <h6> Copyright © {{ copyright }}</h6>
+            </div>
+        </div>
+</footer>

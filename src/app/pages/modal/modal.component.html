@@ -1,0 +1,1157 @@
+<pre>{{ modalData | json}}</pre>
+<div class="container py-5">
+<div class="modal-content">
+    <div class="modal-header  no-padding">
+        <div class="table-header" style="height:30px;vertical-align:middle">
+            <button type="button" class="shadow-none close" style="outline: none !important;" aria-hidden="true" aria-label="Close" (click)="closeModal()">
+                <span class="white">×</span>
+            </button>
+            <h4 class="smaller no-margin" style="padding-top:5px;text-align:center;color:#2d3e50;font-weight:bold">Ders Bologna İçerik</h4>
+        </div>
+    </div>
+    <div class="modal-body" style="width:100%;height:100%; overflow-y: auto;">
+
+<div class="col-md-12 table-responsive">
+<div class="widget-main no-padding table-responsive" id="section-to-print">
+
+    <br>
+    <table border="1" cellpadding="0" cellspacing="0" width="100%" class="table table-striped table-bordered">
+        <tbody>
+            <tr>
+                <td style="width:15%;">
+                    <span id="ContentPlaceHolder1_lbldersDuzeyi" style="color:#2d3e50;font-weight:bold">Dersin Düzeyi</span>
+                </td>
+                <td>
+Lisans                        </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="ContentPlaceHolder1_lblDersDili" style="color:#2d3e50;font-weight:bold">Dersin Dili</span>
+                </td>
+                <td>
+TÜRKÇE
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px; background-color: #F4F8F9; width: 10%">
+                    <span id="ContentPlaceHolder1_lblDersVerilis" style="color:#2d3e50;font-weight:bold">Dersin Veriliş Biçimi</span>
+                </td>
+                <td style="background-color: #F4F8F9; width: 90%">
+Yüz Yüze                        </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span id="ContentPlaceHolder1_lblDersinAmaci" style="color:#2d3e50;font-weight:bold">Dersin Amacı</span>
+                </td>
+                <td>
+
+                    Öğrencilere fonksiyon, limit, süreklilik , türev ve integral  ile ilgili kavramları ve teoremleri öğretmek  günlük problemlerin çözümünde bu derste öğrenilen metodların kullanılması yeteneğini kazandırmaktır. 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+<br><br>
+
+
+
+<table id="dynamic-table" class="table table-striped table-bordered center">
+    <thead>
+        <tr>
+            <th style="text-align: center;color:#2d3e50;font-weight:bold" colspan="8">
+                DERS ÖĞRETİM ÜYELERİ
+
+            </th>
+        </tr>
+    <tr>
+        <th class="center" style="width: 25%; color: #2d3e50;">Öğretim Üye Tipi</th>
+        <th class="center" style="width: 25%; color: #2d3e50;">Adı Soyadı</th>
+
+        
+    </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td style="width:15%" class="center">
+                    Koordinatör
+                </td>
+                <td class="center">
+
+                    PROF.DR. MEHMET FEDAİ  KAYA
+
+                </td>
+
+                
+
+            </tr>
+    </tbody>
+</table>
+<br>
+
+
+<table class="table table-striped table-bordered  table-responsive table-condensed">
+    <thead>
+        <tr>
+            <th style="text-align: center;color:#2d3e50;font-weight:bold" colspan="8">
+                DERS KATEGORİLERİ
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td style="text-align: center;color:#2d3e50;font-weight:bold">
+                    Temel Bilimler	
+                </td>
+                <td style="text-align: center;color:#2d3e50;font-weight:bold">
+                    Mühendislik Bilimleri	
+                </td>
+                <td style="text-align: center;color:#2d3e50;font-weight:bold">
+                    Sosyal Bilimler	
+                </td>
+                <td style="text-align: center;color:#2d3e50;font-weight:bold">
+                    Eğitim Bilimleri	
+                </td>
+                <td style="text-align: center;color:#2d3e50;font-weight:bold">
+                    Sanat Bilimleri
+                </td>
+                <td style="text-align: center;color:#2d3e50;font-weight:bold">
+                    Sağlık Bilimleri	
+                </td>
+                <td style="text-align: center;color:#2d3e50;font-weight:bold">
+                    Tarım Bilimleri
+                </td>
+        </tr>
+        <tr>
+                <td *ngFor="let cat of modalData.course_category |keyvalue :unsorted" style="text-align: center"><label class="center" style="text-align: center">{{ cat.value }}</label></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+<table class="table table-striped table-bordered table-hover  table-responsive table-condensed" id="dynamic-table3">
+    <thead>
+        <tr>
+            <th style="text-align: center;color:#2d3e50;font-weight:bold" colspan="8">
+                DERS YÖNTEM ve TEKNİKLERİ
+
+            </th>
+        </tr>
+        <tr>
+            <th style="color:#2d3e50;">NO</th>
+            <th style="color:#2d3e50;">DERS YÖNTEM ve TEKNİKLERİ</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td style="width: 5%;text-align:center;">1</td>
+                    <td style="width: 95%;">Ders sınıf ortamında karşılıklı konu anlatımı, ödevler ve tartışma şeklinde gerçekleştirilecektir.</td>
+                                    </tr>
+    </tbody>
+</table>
+<br>
+
+
+
+<table class="table table-striped table-bordered table-responsive table-condensed">
+    <thead>
+        <tr>
+            <th style="text-align: center;color:#2d3e50; font-weight: bold;" colspan="7">
+                DERSİN HAFTALARA GÖRE İÇERİK BİLGİLERİ
+                <span style="padding-left: 10px" class="pull-right"><i class="ace-icon fa fa-book "> </i><a href="/Home/IcerikYazdir/32823?dil=tr" style="color: green" title="Ders İçeriğini Excel Olarak İndirip Yazdırabilirsiniz.">Excel Olarak İndir</a></span>
+            </th>
+            
+        </tr>
+        <tr>
+            <th class="center" style="width:5%;color:#2d3e50;font-weight:bold">HAFTA</th>
+            <th class="center" style="color:#2d3e50;font-weight:bold">İÇERİK</th>
+            <th class="center" style="color:#2d3e50;font-weight:bold">KAYNAKLAR</th>
+        </tr>
+    </thead>
+    <tbody>
+
+            <tr>
+                <td style="width: 5%;text-align:center">1</td>
+                    <td style="width: 45%">Küme Cebri	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">2</td>
+                    <td style="width: 45%">Reel Sayılar	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">3</td>
+                    <td style="width: 45%">Eşitsizlikler	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">4</td>
+                    <td style="width: 45%">Fonksiyon Kavramı, Bazı Özel Fonksiyonlar, Hiperbolik ve Ters Hiperbolik Fonksiyonlar	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">5</td>
+                    <td style="width: 45%">Diziler ve Limitleri	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">6</td>
+                    <td style="width: 45%">Fonksiyonların limiti, Limit teoremleri	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">7</td>
+                    <td style="width: 45%">Sürekli fonksiyonlar ve özellikleri, düzgün süreklilik	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">8</td>
+                    <td style="width: 45%">Türev Kavramı	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">9</td>
+                    <td style="width: 45%">Logaritma ve Üstel Fonksiyonun Türevi, Hiperbolik Fonksiyonların Türevi	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">10</td>
+                    <td style="width: 45%">Arasınav</td>
+                    <td style="width: 50%"> </td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">11</td>
+                    <td style="width: 45%">Parametrik Olarak Verilen Fonksiyonların ve Kapalı Fonksiyonların Türevi, Yüksek Mertebeden Türevler	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">12</td>
+                    <td style="width: 45%">Türevin geometrik yorumu , türevle ilgili teoremler	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">13</td>
+                    <td style="width: 45%">Türevin Uygulamaları, Maksimum ve Minimum	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">14</td>
+                    <td style="width: 45%">Lineer Yaklaşım ve Diferansiyel, Genelleştirilmiş Ortalama Değer Teoremi	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+            <tr>
+                <td style="width: 5%;text-align:center">15</td>
+                    <td style="width: 45%">Asimptotlar, Bir Fonksiyonun Grafiğinin çizimi	</td>
+                    <td style="width: 50%">Thomas- Finney Addison-Wesley, "Calculus", 1998,  Schaums outline series, Frank Ayres, "Calculus", 1979, Ahmet Karadeniz, "Yüksek Matematik" Cilt 1, 1993.			 			</td>
+                                    </tr>
+    </tbody>
+</table>
+<br>
+
+
+
+<table class="table table-striped table-bordered table-responsive table-condensed">
+    <thead>
+        <tr>
+            <th style="text-align: center;color:#2d3e50;font-weight:bold" colspan="8">
+                DERS DEĞERLENDİRME SİSTEMİ
+
+            </th>
+        </tr>
+        <tr>
+            <th rowspan="2" style="vertical-align:middle;text-align:center;width:40%;color:#2d3e50;font-weight:bold">DERS DEĞERLENDİRME SİSTEMİ</th>
+            <th colspan="2" style="text-align:center;color:#2d3e50;font-weight:bold">ARA SINAV</th>
+            <th colspan="2" style="text-align:center;color:#2d3e50;font-weight:bold">FINAL</th>
+        </tr>
+        <tr>
+            <th style="text-align:center;width:15%;color:#075f0e;font-weight:bold">SAYI</th>
+            <th style="text-align:center;width:15%;color:#075f0e;font-weight:bold">KATKI PAYI %</th>
+            <th style="text-align:center;width:15%;color:#075f0e;font-weight:bold">SAYI</th>
+            <th style="text-align:center;width:15%;color:#075f0e;font-weight:bold">KATKI PAYI %</th>
+
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Yarıyıl İçi Çalışmaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Devam/Katılım	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Uygulamalı Sınav	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Derse Özgü Staj	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Küçük Sınav	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Ödev</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Sunum ve Seminer</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Projeler</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Atölye/Laboratuvar Uygulamaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Vaka Çalışmaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Arazi Çalışmaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Klinik Çalışmaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Diğer Çalışmaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Ara Sınav	</label></td>
+                    <td style="text-align:center">
+                        1
+                    </td>
+                    <td style="text-align:center">40</td>
+
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Final</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+
+                    <td style="text-align:center">
+                        1
+                    </td>
+                    <td style="text-align:center">60</td>
+            </tr>
+    </tbody>
+</table>
+<br>
+
+
+<table class="table table-striped table-bordered table-responsive table-condensed">
+    <thead>
+        <tr>
+            <th style="text-align: center;color:#2d3e50;font-weight:bold" colspan="8">
+                DERS AKTS İŞ YÜKÜ
+
+            </th>
+        </tr>
+        <tr>
+            <th style="text-align:center;width:40%;color:#2d3e50;font-weight:bold">DERS AKTS İŞ YÜKÜ</th>
+            <th style="text-align:center;width:30%;color:#2d3e50;font-weight:bold">SAYI</th>
+            <th style="text-align:center;width:30%;color:#2d3e50;font-weight:bold">SÜRE</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Ders Süresi	</label></td>
+                    <td style="text-align:center">
+                        14
+                    </td>
+                    <td style="text-align:center">4</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Sınav Dışı Ders Çalışma Süresi	</label></td>
+                    <td style="text-align:center">
+                        14
+                    </td>
+                    <td style="text-align:center">6</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Sunum ve Seminer Hazırlama	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Derse Özgü Staj	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Atölye/Laboratuvar Uygulamaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Arazi Çalışmaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Vaka Çalışmaları	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Projeler</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Ödev</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Küçük Sınavlar	</label></td>
+                    <td style="text-align:center">
+                        0
+                    </td>
+                    <td style="text-align:center">0</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Ara Sınav	</label></td>
+                    <td style="text-align:center">
+                        1
+                    </td>
+                    <td style="text-align:center">15</td>
+            </tr>
+            <tr>
+                <td style="text-align:center"><label style="text-align:center">Final</label></td>
+                    <td style="text-align:center">
+                        1
+                    </td>
+                    <td style="text-align:center">25</td>
+            </tr>
+        <tr>
+            <td colspan="2" style="text-align:right;font-weight:bold;color:#075f0e">DERSİN AKTS KREDİSİ </td>
+            <td colspan="2" style="color:red;text-align:center;font-weight:bold">6</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+
+
+<table class="table table-striped table-bordered table-responsive table-condensed">
+    <thead>
+        <tr>
+            <th style="text-align: center;color:#2d3e50;font-weight:bold" colspan="8">
+                DERS ÖĞRENİM ÇIKTILARI
+
+            </th>
+        </tr>
+        <tr>
+            <th class="center" style="color:#2d3e50;font-weight:bold">NO</th>
+            <th class="center" style="color:#2d3e50;font-weight:bold">ÖĞRENİM ÇIKTI</th>
+            <th class="center" style="color:#2d3e50;font-weight:bold">KATKISI</th>
+        </tr>
+    </thead>
+    <tbody>
+                <tr>
+                    <td style="width: 15%" class="center">D.Ö.Ç.1</td>
+
+                        <td style="width: 70%">Fonksiyonlarda limit ve süreklilik kavramlarını kullanabilme</td>
+                                                <td style="width: 15%" class="center">Çok İyi</td>
+                </tr>
+                <tr>
+                    <td style="width: 15%" class="center">D.Ö.Ç.2</td>
+
+                        <td style="width: 70%">Fonksiyonlarda türev kavramlarını ve uygulama sahalarının verilmesi ilgili problemleri çözebilme yeteneğinin kazandırılması </td>
+                                                <td style="width: 15%" class="center">Çok İyi</td>
+                </tr>
+                <tr>
+                    <td style="width: 15%" class="center">D.Ö.Ç.3</td>
+
+                        <td style="width: 70%">İntegral kavramı tanıtılır, integral alma teknikleri öğretilir  </td>
+                                                <td style="width: 15%" class="center">Çok İyi</td>
+                </tr>
+                <tr>
+                    <td style="width: 15%" class="center">D.Ö.Ç.4</td>
+
+                        <td style="width: 70%">İntegral alma yöntemleriyle alan hacim yay uzunluğu hesabı öğretilir</td>
+                                                <td style="width: 15%" class="center">Çok İyi</td>
+                </tr>
+    </tbody>
+</table>
+<br>
+
+
+<table class="table table-striped table-bordered table-responsive table-condensed">
+    <thead>
+        <tr>
+            <th style="text-align: center;color:#2d3e50;font-weight:bold" colspan="8">
+                DERS ÖĞRENİM ÇIKTILARI VE PROGRAM ÇIKTILARI İLİŞKİLERİ
+
+            </th>
+        </tr>
+        <tr>
+            <th></th>
+                    <th style="text-align: center">
+
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Fonksiyonlarda limit ve süreklilik kavramlarını kullanabilme" data-toggle="tooltip" data-placement="left">DÖÇ 1</span>
+                    </th>
+                    <th style="text-align: center">
+
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Fonksiyonlarda türev kavramlarını ve uygulama sahalarının verilmesi ilgili problemleri çözebilme yeteneğinin kazandırılması " data-toggle="tooltip" data-placement="left">DÖÇ 2</span>
+                    </th>
+                    <th style="text-align: center">
+
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="İntegral kavramı tanıtılır, integral alma teknikleri öğretilir  " data-toggle="tooltip" data-placement="left">DÖÇ 3</span>
+                    </th>
+                    <th style="text-align: center">
+
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="İntegral alma yöntemleriyle alan hacim yay uzunluğu hesabı öğretilir" data-toggle="tooltip" data-placement="left">DÖÇ 4</span>
+                    </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Aktüerya, matematik, istatistik, finans, hukuk gibi alanlardaki temel kavramlara hakim olur" data-toggle="tooltip" data-placement="left">PÇ 1</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6011-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6011-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6011-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6011-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Aktüeryal problemleri modelleyebilir, yorumlayabilir ve problemlere çözüm üretebilir" data-toggle="tooltip" data-placement="left">PÇ 2</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6012-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6012-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6012-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6012-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Sigorta verilerinin istatistiksel ve aktüeryal analizlerini yapar ve öngörülerde bulunur" data-toggle="tooltip" data-placement="left">PÇ 3</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6013-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6013-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6013-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6013-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Karşılaşılan riskleri analiz eder, bu risklere ilişkin ürün geliştirir, fiyatlandırır ve karlılık testlerini yapar" data-toggle="tooltip" data-placement="left">PÇ 4</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6014-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6014-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6014-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6014-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Aktüerya alanında edindiği kuramsal bilgileri güncel problemlere uygulayabilir" data-toggle="tooltip" data-placement="left">PÇ 5</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6015-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6015-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6015-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6015-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Veriyi uygun araçlarla özetleyebilir, yorumlayabilir ve bulguları sunabilir" data-toggle="tooltip" data-placement="left">PÇ 6</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6016-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6016-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6016-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6016-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Aktüerlik sınavlarına hazırlanır" data-toggle="tooltip" data-placement="left">PÇ 7</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6017-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6017-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6017-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6017-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Alanı ile ilgili bilimsel, mesleki ve etik değerlere sahip olur" data-toggle="tooltip" data-placement="left">PÇ 8</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6018-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6018-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6018-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6018-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Alanındaki gelişmeleri izleyebilecek ve meslektaşları ile iletişim kurabilecek düzeyde bir yabancı dil bilgisine sahip olur" data-toggle="tooltip" data-placement="left">PÇ 9</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6019-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6019-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6019-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6019-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Analitik düşünme becerisine sahip olur" data-toggle="tooltip" data-placement="left">PÇ 10</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6020-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6020-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6020-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" checked="" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6020-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Bilgisayar programı yazabilir ve alanı ile ilgili paket programları kullanabilir" data-toggle="tooltip" data-placement="left">PÇ 11</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6021-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6021-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6021-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6021-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Takım çalışması içinde çalışabilir ve liderlik yapabilir" data-toggle="tooltip" data-placement="left">PÇ 12</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6022-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6022-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6022-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6022-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: center">
+                        <span class="label label-lg label-primary arrowed arrowed-right" title="Bireysel çalışma becerisi ve bağımsız karar verebilme yeteneğine sahip olur" data-toggle="tooltip" data-placement="left">PÇ 13</span>
+                    </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6023-100305" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6023-100306" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6023-100307" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                        <td style="text-align: center">
+                                <div class="checkbox">
+                                    <label class="block">
+                                        <input id="CheckListGelen" type="checkbox" name="CheckGelen" style="text-align: center" class="ace input-lg" value="6023-100308" data-toggle="tooltip" data-placement="left" title="" disabled="">
+                                        <span class="lbl bigger-120"></span>
+                                    </label>
+                                </div>
+                        </td>
+                </tr>
+
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</div></div>

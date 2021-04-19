@@ -1,0 +1,24 @@
+<div class="container-sm py-5 my-5">
+  <div *ngFor="let i=index;let item of messages"> <h4 style="font-weight: 700;">{{ item.name }}</h4><br>
+    <div class="accordion menushadow" [attr.id]="'accordion'+i">
+        <div class="card" *ngFor="let j=index; let buton of item.links">
+          <div class="card-header" [attr.id]="'he'+i+'ad'+j">
+            <h5 class="mb-0">
+              <button type="button" class="btn btn-link shadow-none" (click)="getInfo(buton.href,buton.rel)"  data-toggle="collapse" [attr.data-target]="'#collapse'+i+'pane'+j" aria-expanded="false" [attr.aria-controls]="'collapse'+i+'pane'+j" style="color: #f6424c;font-weight: 700;font-size: large;">
+               {{ buton.rel }}
+              </button>
+            </h5>
+          </div>
+      
+          <div [attr.id]="'collapse'+i+'pane'+j" class="collapse" [attr.aria-labelledby]="'he'+i+'ad'+j" [attr.data-parent]="'#accordion'+i">
+            <div class="card-body">
+              <div class="loader" *ngIf="loading( buton.rel ) && ( getVeri.showSpinner | async ) " ><div class="circle"></div></div>
+              <div *ngIf="!(getVeri.showSpinner | async)">
+                <p *ngFor="let paragraf of data | keyvalue">{{ paragraf.value.content }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div><br>
+  </div>
+</div>

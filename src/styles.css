@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+html, body {
+    font-family: 'Muli';
+}
+.loader{
+    min-height: 100%;
+    min-width: 100%;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
+.circle{
+    position: absolute;
+    border-right: 2px solid #ff0000;
+    border-bottom: 2px solid #ff0000;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: circle .8s linear infinite;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin: auto;
+}
+@keyframes circle{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.btn::before {
+	content: "\f107";
+    color: #f6424c;
+    margin-right:15px;
+    font-family: "Font Awesome 5 Free";
+}
+
+.btn[aria-expanded="true"]::before {
+	content: "\f106";
+}

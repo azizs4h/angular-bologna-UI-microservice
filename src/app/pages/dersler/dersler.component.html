@@ -1,0 +1,27 @@
+<div class="container py-5">
+    <div  *ngFor="let item of dersler"  class="table-responsive py-5">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr align="center"><th scope="col" colspan="6">Dönem {{ item.semester_number }} </th></tr>
+            <tr>
+                <th scope="col">Dersin Kodu</th>
+                <th scope="col">Ders Adı</th>
+                <th scope="col">Dersin AKTS (ECTS)</th>
+                <th scope="col">Tür</th>
+                <th scope="col">Kordinatör Adı</th>
+                <th scope="col">Haftalık Ders Saatleri <br>Teorik / Pratik</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let ders of item.universityLectures">
+                <th scope="row">{{ders.lecture_id}}</th>
+                <td title="ders içeriği için tıklayınız" style="color: #f6424c;cursor: pointer;" (click)="open(ders.links[0].href)">{{ders.lecture_name}}</td>               
+                <td>{{ders.lecture_ECTS}}</td>
+                <td>{{ders.lecture_type}}</td>
+                <td>Kordinatöre Deparat</td>
+                <td>{{ders.theoretical_course_hour}} / {{ders.practical_course_hour}}</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+</div>

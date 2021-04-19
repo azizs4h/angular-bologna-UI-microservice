@@ -1,0 +1,17 @@
+.color{
+    background-color: #f6424c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #f8f0ee;
+    height: 100px;
+}
+.footer-all{
+    background-color: #EEEBE8;
+}
+li{
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+ul span{
+    font-weight: 700;
+}
